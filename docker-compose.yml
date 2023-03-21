@@ -1,11 +1,11 @@
-version: "3.9"
+version: '3.9'
 services:
   web:
     build:
       context: ./web
       dockerfile: Dockerfile
     ports:
-      - "8080:80"
+      - '8080:80'
     depends_on:
       - api
     networks:
@@ -14,8 +14,8 @@ services:
     build:
       context: ./api
       dockerfile: Dockerfile
-    ports:
-      - "3000:3000"
+    # ports:
+    #   - '3000:3000'
     depends_on:
       - mongo
     networks:
